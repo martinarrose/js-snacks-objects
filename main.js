@@ -79,9 +79,10 @@ soccerPlayers.forEach((team) => {
 
 console.log(soccerPlayers);
 
-soccerPlayers.map((team) => {
+const withoutFoulDrown = soccerPlayers.map((team) => {
   return {
     name: team.name,
     goalScored: team.goalScored,
   };
 });
+console.log(withoutFoulDrown);
