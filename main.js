@@ -25,3 +25,42 @@ for (let i = 1; i < bikes.length; i++) {
   }
 }
 console.log(lighterBike);
+
+const teamFootBall = [
+  {
+    name: "milan",
+    goals: 0,
+    fouls: 0,
+  },
+  {
+    name: "inter",
+    goals: 0,
+    fouls: 0,
+  },
+  {
+    name: "napoli",
+    goals: 0,
+    fouls: 0,
+  },
+  {
+    name: "palermo",
+    goals: 0,
+    fouls: 0,
+  },
+];
+let randomGoalsFouls = teamFootBall;
+
+for (let i = 0; i < teamFootBall.length; i++) {
+  teamFootBall[i].goals = Math.floor(Math.random() * 10) + 1;
+  teamFootBall[i].fouls = Math.floor(Math.random() * 10) + 1;
+}
+
+console.log(randomGoalsFouls);
+
+const withoutGoals = teamFootBall.map((team) => {
+  return {
+    name: team.name,
+    fouls: team.fouls,
+  };
+});
+console.log(withoutGoals);
